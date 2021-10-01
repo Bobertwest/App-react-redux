@@ -1,39 +1,24 @@
 {
   "productos": [
     {
-      "id": 1,
-      "nombre": "Jugo de Zanahoria",
-      "precio": "31111"
+      "nombre": "Frutas",
+      "precio": "25.36",
+      "id": 11
     },
     {
-      "id": 2,
-      "nombre": "Jugo de Naranja",
-      "precio": "1"
+      "nombre": "Manzanas",
+      "precio": "4.00",
+      "id": 13
     },
     {
-      "nombre": "Jugo de Naranja",
-      "precio": "300",
-      "id": 3
+      "nombre": "Uvas sin semillas",
+      "precio": "4.00",
+      "id": 14
     },
     {
-      "nombre": "Rib Eye 800g",
-      "precio": "200",
-      "id": 4
-    },
-    {
-      "nombre": "Jugo de Fresa",
-      "precio": "200",
-      "id": 5
-    },
-    {
-      "nombre": "Naranja",
-      "precio": "24.00",
-      "id": 6
-    },
-    {
-      "nombre": "Peras tropicales",
-      "precio": "25.96",
-      "id": 7
+      "nombre": "Jugo de naranja",
+      "precio": "14.00",
+      "id": 15
     }
   ]
 }

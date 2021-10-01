@@ -2,7 +2,12 @@ import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { crearNuevoProductoAction } from "../actions/productoActions";
 
-const NuevoProducto = () => {
+const NuevoProducto = (props) => {
+  const { history } = props;
+  const productosState = useSelector((state) => state.productos);
+
+  const { loading, error } = productosState;
+
   const dispatch = useDispatch();
   const [nuevoProducto, setNuevoProducto] = useState({
     nombre: "",
@@ -28,6 +33,7 @@ const NuevoProducto = () => {
     }
     nuevoProducto.precio = nuevoProducto.precio.toFixed(2);
     dispatch(crearNuevoProductoAction(nuevoProducto));
+    history.push("/");
   };
   return (
     <div className="row justify-content-center">
@@ -43,6 +49,7 @@ const NuevoProducto = () => {
                 <label>Nombre Producto</label>
                 <input
                   type="text"
+                  autoComplete="off"
                   className="form-control"
                   placeholder="Nombre Producto"
                   name="nombre"
@@ -70,6 +77,12 @@ const NuevoProducto = () => {
                 Agregar
               </button>
             </form>
+            {loading ? <p>Cargando...</p> : null}
+            {error ? (
+              <p className="alert alert-danger p2 mt-4 text-center">
+                Hubo un error
+              </p>
+            ) : null}
           </div>
         </div>
       </div>
